@@ -4,13 +4,9 @@ function removeElement(nums: number[], val: number): number {
         // if the current value is equal to the received value, remove it
         // else go to the next iteration
         // splicing will change the current indexed element, which we don't want
-        if (nums[i] === val) {
-            nums.splice(i, 1);
-        } else {
-            i++;
-        }
+        nums[i] === val ? nums.splice(i, 1) : i++;
     }
 
     // return the new length of the nums array
-    return nums.length
+    return nums.length;
 };
